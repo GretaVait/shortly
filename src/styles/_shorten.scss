@@ -1,0 +1,123 @@
+@import "./variables";
+
+.shorten {
+    padding: 30px;
+    @include breakpoint(768) {
+        padding: 50px;
+    }
+    @include breakpoint(1350) {
+        padding: 100px;
+    }
+    .shorten__banner {
+        background-color: $veryDarkBlue;
+        @include bgImg("../images/bg-shorten-mobile.svg", cover, 100% 200%);
+        padding: 20px;
+        border-radius: 10px;
+        @include breakpoint(768) {
+            padding: 40px 30px;
+            @include bgImg("../images/bg-shorten-desktop.svg", cover, 50%);
+        }
+        @include breakpoint(1350) {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .shorten__form {
+            @include flexColumn(stretch, center, nowrap);
+            @include breakpoint(768) {
+                display: grid;
+                grid-template-columns: 4fr 1fr;
+            }
+            input {
+                font-weight: 700;
+                font-size: 1.4em;
+                color: $grayishViolet;
+                padding: 10px 5px;
+                margin: 0 0 15px 0;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                @include breakpoint(768) {
+                    margin: 0 30px 0 0;
+                }
+                @include breakpoint(1350) {
+                    padding: 10px 10px;
+                    font-size: 2em;
+                }
+            }
+            button {
+                cursor: pointer;
+                @include cyanBtn(5px, 10px, 5px);
+                @include breakpoint(768) {
+                    @include cyanBtn(5px, 10px, 20px);
+                    &:hover {
+                        background-color: lighten($color: $cyan, $amount: 10%);
+                        transition: background-color 0.3s ease-in-out;
+                    }
+                }
+                @include breakpoint(1350) {
+                    @include cyanBtn(5px, 10px, 30px);
+                    font-size: 2em;
+                }
+            }
+        }
+    }
+    .results-show {
+        display: block;
+        box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.5);
+        padding: 20px;
+        margin: 20px 0 0 0;
+        border-radius: 10px;
+        @include breakpoint(768) {
+            display: grid;
+            grid-template-columns: 3fr 1fr 1fr;
+            column-gap: 50px;
+            align-items: center;
+            padding: 30px;
+        }
+        @include breakpoint(1350) {
+            width: 80%;
+            margin: 40px auto 0 auto;
+        }
+        @include flexColumn(stretch, space-between, nowrap);
+        .shorten-link {
+            color: $cyan;
+            padding: 10px 0 0 0;
+            margin: 0 0 20px 0;
+            font-size: 1.6em;
+            font-weight: 600;
+            border: none;
+            outline: none;
+            @include breakpoint(768) {
+                padding: 0;
+                margin: 0;
+            }
+        }
+        .default-link {
+            padding: 0 0 10px 0;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-bottom: 1px solid $veryDarkBlue;
+            font-size: 1.6em;
+            font-weight: 600;
+            outline: none;
+            @include breakpoint(768) {
+                border: none;
+                padding: 0;
+                margin: 0;
+            }
+        }
+        .copy-link {
+            @include cyanBtn(5px, 5px, 10px);
+            cursor: pointer;
+        }
+    }
+    .results-hidden {
+        display: none;
+    }
+    .error {
+        font-weight: bold;
+        font-size: 1.4em;
+        color: $red;
+    }
+}

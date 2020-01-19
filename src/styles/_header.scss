@@ -1,0 +1,98 @@
+@import "./variables";
+
+header {
+    @include flexRow(center, space-between, nowrap);
+    padding: 30px;
+    @include breakpoint(768) {
+        padding: 30px 50px;
+    }
+    @include breakpoint(1350) {
+        padding: 30px 100px;
+    }
+}
+
+.menu {
+    @include flexRow(center, center, nowrap);
+    width: 50px;
+    height: 50px;
+    @include breakpoint(768) {
+        display: none;
+    }
+    cursor: pointer;
+}
+
+.close {
+    @include flexRow(center, center, nowrap);
+    justify-self: flex-end;
+    align-self: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    @include breakpoint(768) {
+        display: none;
+    }
+}
+
+.line {
+    height: 2px;
+    width: 25px;
+    background-color: $grayishViolet;
+    margin: 0 0 5px 0;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr;
+    padding: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $veryDarkBlue;
+    z-index: 2;
+    transform: translate(0, -100%);
+    transition: transform 0.3s ease-in-out;
+    @include breakpoint(768) {
+        display: block;
+        position: static;
+        width: auto;
+        height: auto;
+        padding: 0;
+        background-color: transparent;
+        transform: none;
+    }
+    .nav__list {
+        @include flexColumn(center, center, nowrap);
+        @include breakpoint(768) {
+            display: block;
+        }
+    }
+    .nav__item {
+        display: block;
+        margin: 15px 0;
+        @include breakpoint(768) {
+            display: inline;
+            margin: 0 10px;
+        }
+        .nav__link {
+            color: white;
+            font-size: 3em;
+            font-weight: 700;
+            @include breakpoint(768) {
+                font-size: 1.8em;
+                color: $grayishViolet;
+                font-size: 1.6em;
+                &:hover {
+                    color: darken($color: $grayishViolet, $amount: 50%);
+                    transition: color 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+.nav-active {
+    transform: translate(0, 0);
+}

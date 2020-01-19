@@ -1,0 +1,52 @@
+//Color variables
+$cyan: #2acfcf;
+$darkViolet: #3b3054;
+$red: #f46262;
+$gray: #f5f4f4;
+$grayishViolet: #9e9aa7;
+$veryDarkBlue: #35323e;
+$veryDarkViolet: #232127;
+
+// Fonts
+$poppins: 'Poppins', sans-serif;
+
+//Mixins
+@mixin flexRow($align, $just, $wrap) {
+    display: flex;
+    flex-direction: row;
+    align-items: $align;
+    justify-content: $just;
+    flex-wrap: $wrap;
+}
+
+@mixin flexColumn($align, $just, $wrap) {
+    display: flex;
+    flex-direction: column;
+    align-items: $align;
+    justify-content: $just;
+    flex-wrap: $wrap;
+}
+
+@mixin bgImg($url, $size, $position) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: $size;
+    background-position: $position;
+}
+
+@mixin cyanBtn($radius, $topBottom, $leftRight) {
+    padding: $topBottom $leftRight;
+    border-radius: $radius;
+    background-color: $cyan;
+    color: white;
+    font-size: 1.4em;
+    font-weight: 700;
+    border: none;
+    outline: none;
+}
+
+@mixin breakpoint($screen) {
+    @media (min-width: $screen+'px') {
+        @content;
+    }
+}

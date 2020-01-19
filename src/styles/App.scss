@@ -1,0 +1,75 @@
+@import "./variables";
+@import "./header";
+@import "./home";
+@import "./shorten";
+@import "./about";
+@import "./footer";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $poppins;
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  text-align: center;
+  @include breakpoint(768) {
+    text-align: left;
+  }
+}
+
+.display1 {
+  font-size: 4em;
+  line-height: 1.2;
+  margin: 20px 0;
+  @include breakpoint(768) {
+    font-size: 4.5em;
+  }
+  @include breakpoint(1350) {
+    font-size: 7em;
+  } 
+}
+
+.display2 {
+  font-size: 3em;
+  margin: 20px 0;
+  @include breakpoint(768) {
+    font-size: 3.5em;
+  }
+}
+
+.display3 {
+  font-size: 2em;
+  margin: 40px 0 10px 0;
+  @include breakpoint(1350) {
+    font-size: 2.5em;
+  }
+}
+
+.display4 {
+  font-size: 1.8em;
+  text-align: left;
+}
+
+p {
+  font-size: 1.6em;
+  line-height: 1.6;
+  color: $grayishViolet;
+  @include breakpoint(1350) {
+    font-size: 1.8em;
+  }
+}

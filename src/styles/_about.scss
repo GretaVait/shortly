@@ -1,0 +1,44 @@
+@import "./variables";
+
+.about {
+    position: relative;
+    background-color: $gray;
+    padding: 30px;
+    @include breakpoint(768) {
+        padding: 50px;
+    }
+    @include breakpoint(1350) {
+        padding: 100px;
+    }
+    .about__list{
+        margin: 100px 0 0 0;
+        @include breakpoint(768) {
+            @include flexRow(stretch, space-between, wrap);
+        }
+        .about__item {
+            position: relative;
+            background-color: white;
+            margin: 0 0 100px 0;
+            padding: 20px;
+            border-radius: 5px;
+            @include breakpoint(768) {
+                width: 45%;
+            }
+            @include breakpoint(1350) {
+                width: 30%;
+            }
+            .about__img {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                @include flexRow(center, center, nowrap);
+                background-color: $veryDarkBlue;
+                width: 80px;
+                height: 80px;
+                margin: 0 auto;
+                border-radius: 50%;
+            }
+        }
+    }
+}

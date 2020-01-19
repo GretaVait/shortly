@@ -1,0 +1,25 @@
+@import "./variables";
+
+footer {
+    padding: 50px 30px;
+    background-color: $veryDarkBlue;
+    color: white;
+    @include bgImg("../images/bg-boost-mobile.svg", cover, 50%);
+    @include breakpoint(768) {
+        padding: 50px;
+        @include bgImg("../images/bg-boost-desktop.svg", cover, 50%);
+    }
+    @include breakpoint(1350) {
+        padding: 100px;
+    }
+    button {
+        cursor: pointer;
+        @include cyanBtn(20px, 10px, 30px);
+        @include breakpoint(768) {
+            &:hover {
+                background-color: lighten($color: $cyan, $amount: 10%);
+                transition: background-color 0.3s ease-in-out;
+            }
+        }
+    }
+}
