@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/GretaVait/shorty/static/css/main.da0eb313.chunk.css",
+    "main.js": "/GretaVait/shorty/static/js/main.ff28faf6.chunk.js",
+    "main.js.map": "/GretaVait/shorty/static/js/main.ff28faf6.chunk.js.map",
+    "runtime-main.js": "/GretaVait/shorty/static/js/runtime-main.4024cd34.js",
+    "runtime-main.js.map": "/GretaVait/shorty/static/js/runtime-main.4024cd34.js.map",
+    "static/js/2.0030c983.chunk.js": "/GretaVait/shorty/static/js/2.0030c983.chunk.js",
+    "static/js/2.0030c983.chunk.js.map": "/GretaVait/shorty/static/js/2.0030c983.chunk.js.map",
+    "index.html": "/GretaVait/shorty/index.html",
+    "precache-manifest.2340cec2896890b09ec1fe8eeb8da7b1.js": "/GretaVait/shorty/precache-manifest.2340cec2896890b09ec1fe8eeb8da7b1.js",
+    "service-worker.js": "/GretaVait/shorty/service-worker.js",
+    "static/css/main.da0eb313.chunk.css.map": "/GretaVait/shorty/static/css/main.da0eb313.chunk.css.map",
+    "static/js/2.0030c983.chunk.js.LICENSE": "/GretaVait/shorty/static/js/2.0030c983.chunk.js.LICENSE",
+    "static/media/App.css": "/GretaVait/shorty/static/media/bg-shorten-mobile.4a7a7f61.svg",
+    "static/media/close.svg": "/GretaVait/shorty/static/media/close.e0029bcc.svg",
+    "static/media/icon-brand-recognition.svg": "/GretaVait/shorty/static/media/icon-brand-recognition.1922b68a.svg",
+    "static/media/icon-detailed-records.svg": "/GretaVait/shorty/static/media/icon-detailed-records.e3d9caa9.svg",
+    "static/media/icon-fully-customizable.svg": "/GretaVait/shorty/static/media/icon-fully-customizable.cc099cea.svg",
+    "static/media/illustration-working.svg": "/GretaVait/shorty/static/media/illustration-working.5029d049.svg",
+    "static/media/logo.svg": "/GretaVait/shorty/static/media/logo.6387840f.svg",
+    "static/media/menu.svg": "/GretaVait/shorty/static/media/menu.04518f6c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4024cd34.js",
+    "static/js/2.0030c983.chunk.js",
+    "static/css/main.da0eb313.chunk.css",
+    "static/js/main.ff28faf6.chunk.js"
+  ]
+}
